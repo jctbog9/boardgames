@@ -1,6 +1,6 @@
-# Graphql Starter Kit
+# Boardgames App
 
-## Setting Up A New project
+## Setting Up This Repo
 
 If you have not already, please install the following:
 
