@@ -1,4 +1,4 @@
-# Project Name
+# Boardgames App
 
 ## Set Up Local Development
 
