@@ -11,7 +11,7 @@ If you have not already, please install the following:
 You'll also need a postgres database running locally, which can be installed via [homebrew](https://gist.github.com/ibraheem4/ce5ccd3e4d7a65589ce84f2a3b7c23a3) or the [postgres.app](https://postgresapp.com/).
 
 1. Clone this repository  
-   git clone https://YOUR_ACCENTURE_EID_HERE@source.digital.accenture.com/scm/int/graphql-starter-kit.git your-app-name  
+   git clone https://github.com/jctbog9/boardgames.git
    cd your-app-name
 
 2. Set up the local database and project
