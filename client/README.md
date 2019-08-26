@@ -9,7 +9,7 @@ If you have not already, please install:
 
 1. Run the following commands
    ```
-   $ git clone https://YOUR_ACCENTURE_EID_HERE@source.digital.accenture.com/scm/int/graphql-starter-kit.git your-app-name
+   $ git clone https://github.com/jctbog9/boardgames.git
    $ cd your-app-name
    $ asdf install
    $ cp .env.sample .env
