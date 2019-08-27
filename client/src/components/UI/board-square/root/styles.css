@@ -1,0 +1,9 @@
+.whiteSquare {
+  width: 50px;
+  background-color: #FFFFFF;
+}
+
+.blackSquare {
+  width: 50px;
+  background-color: #000000;
+}

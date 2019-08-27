@@ -41,6 +41,7 @@
     "hygen": "^3.0.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^24.1.0",
+    "jest-enzyme": "^7.1.0",
     "jest-watch-typeahead": "^0.2.1",
     "lint-staged": "^8.1.4",
     "mini-css-extract-plugin": "^0.5.0",
@@ -55,8 +56,11 @@
   },
   "dependencies": {
     "classnames": "^2.2.6",
+    "enzyme": "^3.10.0",
+    "enzyme-adapter-react-16": "^1.14.0",
     "graphql": "^14.1.1",
     "graphql-tag": "^2.10.1",
+    "prop-types": "^15.7.2",
     "react": "^16.8.3",
     "react-dom": "^16.8.3",
     "react-router-dom": "^4.3.1",
@@ -114,7 +118,11 @@
       "styles.css$": "identity-obj-proxy"
     },
     "setupFiles": [
-      "<rootDir>/build-utils/jest/polyfills.js"
+      "<rootDir>/build-utils/jest/polyfills.js",
+      "<rootDir>/build-utils/jest/setupTestFrameworkScript.js"
+    ],
+    "setupFilesAfterEnv": [
+      "./node_modules/jest-enzyme/lib/index.js"
     ],
     "testPathIgnorePatterns": [
       "<rootDir>[/\\\\](node_modules|scripts|server)[/\\\\]"
