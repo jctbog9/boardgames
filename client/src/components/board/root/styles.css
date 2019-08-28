@@ -3,10 +3,14 @@
   height: 800px;
   display: flex;
   flex-wrap: wrap;
+  border: 8px solid #451C05;
+  background-color: #451C05;
+  padding: 8px;
+  border-radius: 20px;
 }
 
 .whiteSquare {
-  border: 1px solid #000000;
+  border: 1px solid #451C05;
   width: 98px;
   height: 98px;
   background-color: #FFFFFF;
@@ -15,5 +19,15 @@
 .blackSquare {
   width: 100px;
   height: 100px;
-  background-color: #000000;
+  background-color: #451C05;
+}
+
+.whiteSquare,
+.blackSquare {
+  display: flex;
+  justify-content: center;
+}
+
+img {
+  transform: scale(0.8)
 }
