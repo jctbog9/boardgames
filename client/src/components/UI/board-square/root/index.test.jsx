@@ -28,29 +28,29 @@ describe('BoardSquare', () => {
   })
 
   it.each`
-  image           | expected
+  piece           | expected
   ${black.rook}   | ${black.rook} 
   ${black.knight} | ${black.knight}
   ${black.bishop} | ${black.bishop}
   ${black.queen}  | ${black.queen}
   ${black.king}   | ${black.king}
   ${black.pawn}   | ${black.pawn}
-  `('should render black $expected if initialPiece: $image', ({ image, expected, ...props }) => {
-    wrapper.setProps({ initialPiece: image })
+  `('should render black $expected if piece: $piece', ({ piece, expected, ...props }) => {
+    wrapper.setProps({ piece: piece })
     const source = wrapper.find('img')
     expect(source.props().src).toBe(expected)
   })
  
   it.each`
-  image           | expected
+  piece           | expected
   ${white.rook}   | ${white.rook} 
   ${white.knight} | ${white.knight}
   ${white.bishop} | ${white.bishop}
   ${white.queen}  | ${white.queen}
   ${white.king}   | ${white.king}
   ${white.pawn}   | ${white.pawn}
-  `('should render white $expected if initialPiece: $image', ({ image, expected, ...props }) => {
-    wrapper.setProps({ initialPiece: image })
+  `('should render white $expected if piece: $piece', ({ piece, expected, ...props }) => {
+    wrapper.setProps({ piece: piece })
     const source = wrapper.find('img')
     expect(source.props().src).toBe(expected)
   })

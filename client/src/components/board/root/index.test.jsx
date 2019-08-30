@@ -34,8 +34,8 @@ describe('BoardPage', () => {
 
   it('createBoard function should create a board with 8 rows of squares', () => {
     const instance = wrapper.instance()
-    const rows = instance.createBoard()
-    expect(rows.length).toBe(8)
+    const board = instance.createBoard()
+    expect(board.length).toBe(64)
   })
   
   it.each`
@@ -53,5 +53,31 @@ describe('BoardPage', () => {
     const instance = wrapper.instance()
     const row = instance.createRow(i, rowNumber)
     expect(row[0].props.styles).toBe(expectedFirstStyle)
+  })
+
+  it('should set selectedPiece in state to selected image when selectPiece function is invoked', () => {
+    const event = {
+      target: {
+        id: 11,
+        src: 'chess piece image url'
+      }
+    }
+    const instance = wrapper.instance()
+    instance.selectPiece(event)
+    expect(wrapper.state().selectedPiece).toBe(event.target.src)
+  })
+
+  it('should move selected piece if wrapper.state.selectedPiece has a value', () => {
+    const event = {
+      target: {
+        id: 11,
+        src: 'chess piece image url'
+      }
+    }
+    wrapper.setState({ selectedPiece: event.target.src })
+    const instance = wrapper.instance()
+    instance.movePiece(event)
+    expect(wrapper.state().initialBoard[event.target.id].props.piece).toBe(event.target.src)
+    expect(wrapper.state().selectPiece).toBeFalsy()
   })
 })
